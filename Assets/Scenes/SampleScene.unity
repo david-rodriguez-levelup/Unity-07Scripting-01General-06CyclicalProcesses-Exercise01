@@ -132,8 +132,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 128114829}
-  - component: {fileID: 128114825}
   - component: {fileID: 128114830}
+  - component: {fileID: 128114825}
   - component: {fileID: 128114828}
   - component: {fileID: 128114827}
   - component: {fileID: 128114826}
@@ -153,14 +153,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 128114824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d863bcecc7a35c441bcb8bce39067924, type: 3}
+  m_Script: {fileID: 11500000, guid: caa71baa496064b468e16d58a80bfa25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transition: 2
-  _values:
-  - {r: 1, g: 0, b: 0, a: 0}
-  - {r: 0, g: 1, b: 0, a: 0}
-  - {r: 0, g: 0, b: 1, a: 0}
+  _stepDuration: 2
+  _pauseBetweenLoops: 0
+  _steps:
+  - {x: 4, y: 0, z: 0}
+  - {x: 0, y: 4, z: 0}
+  - {x: -4, y: 0, z: 0}
 --- !u!135 &128114826
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -246,14 +247,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 128114824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a0ff701fff6a34ea4d542ed62fc03f, type: 3}
+  m_Script: {fileID: 11500000, guid: fb58c2dfd518c5641a6d2192d30baf5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _transition: 2
-  _values:
-  - {x: 4, y: 0, z: 0}
-  - {x: 0, y: 4, z: 0}
-  - {x: -4, y: 0, z: 0}
+  _stepDuration: 2
+  _pauseBetweenLoops: 0
+  _steps:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 0.73333335, b: 0.98039216, a: 1}
+  - {r: 0.8901961, g: 1, b: 0, a: 1}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
