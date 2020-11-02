@@ -9,14 +9,14 @@ using UnityEngine;
 public class ColorTweener : BaseTweener
 {
 
-    #region Fields/Properties
+    #region Variables
 
     [SerializeField]
     [Tooltip("List of ordered color steps to interpolate each loop.")]
     private List<Color> _steps;
 
     // Renderer component in the GameObject.
-    private Renderer _myRenderer;
+    private Renderer _renderer;
 
     // Initial color of the object. Needed for the initial lerp.
     private Color _initialColor;
@@ -27,8 +27,8 @@ public class ColorTweener : BaseTweener
 
     private void Awake()
     {
-        _myRenderer = GetComponent<Renderer>();
-        _initialColor = _myRenderer.material.color;
+        _renderer = GetComponent<Renderer>();
+        _initialColor = _renderer.material.color;
     }
 
     # endregion  
@@ -42,12 +42,12 @@ public class ColorTweener : BaseTweener
 
     protected override void DoInitialLerp(float stepRatio) 
     {
-        _myRenderer.material.color = Color.Lerp(_initialColor, _steps[0], stepRatio);
+        _renderer.material.color = Color.Lerp(_initialColor, _steps[0], stepRatio);
     }
 
     protected override void DoLerp(int startIndex, int endIndex, float stepRatio)
     {
-        _myRenderer.material.color = Color.Lerp(_steps[startIndex], _steps[endIndex], stepRatio);
+        _renderer.material.color = Color.Lerp(_steps[startIndex], _steps[endIndex], stepRatio);
     }  
 
     #endregion

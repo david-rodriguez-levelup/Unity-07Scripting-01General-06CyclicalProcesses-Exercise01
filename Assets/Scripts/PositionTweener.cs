@@ -9,7 +9,7 @@ using UnityEngine;
 public class PositionTweener : BaseTweener
 {
 
-    #region Fields/Properties
+    #region Variables
 
     [SerializeField]
     [Tooltip("List of ordered position steps to interpolate each loop.")]

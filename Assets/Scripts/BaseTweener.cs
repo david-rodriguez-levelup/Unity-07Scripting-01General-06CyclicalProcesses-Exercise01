@@ -14,7 +14,7 @@ using UnityEngine;
 public abstract class BaseTweener : MonoBehaviour
 {
 
-    #region Fields/Properties
+    #region Variables
 
     /// <summary>
     /// Number of loops completed since the script started.
